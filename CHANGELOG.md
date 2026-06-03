@@ -1,4 +1,4 @@
-## [1.0.5] - June 4 2026
+## [1.0.6] - June 4 2026
 * Updates minimum supported SDK version to Flutter 3.44/Dart 3.12.
 * Migrates to built-in Kotlin
 
