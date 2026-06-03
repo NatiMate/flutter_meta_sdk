@@ -20,8 +20,7 @@ let package = Package(
             name: "flutter_meta_sdk",
             dependencies: [
                 .product(name: "FlutterFramework", package: "FlutterFramework"),
-                .product(name: "FBSDKCoreKit", package: "facebook-ios-sdk"),
-                .product(name: "FBAudienceNetwork", package: "facebook-ios-sdk")
+                .product(name: "FacebookCore", package: "facebook-ios-sdk"),
             ],
             resources: [
                 // TODO: If your plugin requires a privacy manifest

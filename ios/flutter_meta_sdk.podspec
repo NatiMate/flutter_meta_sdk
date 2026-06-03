@@ -14,11 +14,9 @@ Pod::Spec.new do |s|
   s.author           = { 'Solusi Bejo' => 'chandrashibezzo@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'flutter_meta_sdk/Sources/flutter_meta_sdk/**/*.swift'
-  s.public_header_files = 'flutter_meta_sdk/Sources/flutter_meta_sdk/**/*.h'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'FBAudienceNetwork'
+  s.dependency 'FacebookCore'
   s.platform = :ios, '13.0'
 
   # Flutter.framework does not contain a i386 slice.

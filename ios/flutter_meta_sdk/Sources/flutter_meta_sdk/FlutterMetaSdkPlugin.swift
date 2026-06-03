@@ -2,10 +2,10 @@ import Flutter
 import UIKit
 import FBSDKCoreKit
 
-public class SwiftFlutterMetaSdkPlugin: NSObject, FlutterPlugin {
+public class FlutterMetaSdkPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
             let channel = FlutterMethodChannel(name: "solusibejo.com/flutter_meta_sdk", binaryMessenger: registrar.messenger())
-            let instance = SwiftFlutterMetaSdkPlugin()
+            let instance = FlutterMetaSdkPlugin()
 
             // Required for FB SDK 9.0, as it does not initialize the SDK automatically any more.
             // See: https://developers.facebook.com/blog/post/2021/01/19/introducing-facebook-platform-sdk-version-9/
