@@ -1,11 +1,11 @@
 name: flutter_meta_sdk
 description: Meta SDK for Flutter. This package allow you to integration with Facebook SDK using developer facebook dashboard, track flutter app events, and etc.
-version: 1.0.5
+version: 1.0.6
 homepage: https://github.com/chandrabezzo/flutter_meta_sdk
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
 
 dependencies:
   flutter:
