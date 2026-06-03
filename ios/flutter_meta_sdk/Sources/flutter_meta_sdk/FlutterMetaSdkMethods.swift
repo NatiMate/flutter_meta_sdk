@@ -7,8 +7,7 @@
 
 import Flutter
 import Foundation
-import FBSDKCoreKit
-import FBSDKCoreKit_Basics
+import FacebookCore
 
 class FlutterMetaSdkMethods {
     static func clearUserData(result: @escaping FlutterResult) {
