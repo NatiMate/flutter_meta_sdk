@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "flutter_meta_sdk",
     platforms: [
-        .iOS("12.0"),
+        .iOS("13.0"),
     ],
     products: [
         .library(name: "flutter-meta-sdk", targets: ["flutter_meta_sdk"])
@@ -20,7 +20,7 @@ let package = Package(
             name: "flutter_meta_sdk",
             dependencies: [
                 .product(name: "FlutterFramework", package: "FlutterFramework"),
-                .product(name: "FBSDKCoreKit", package: "facebook-ios-sdk")
+                .product(name: "FBSDKCoreKit", package: "facebook-ios-sdk"),
                 .product(name: "FBAudienceNetwork", package: "facebook-ios-sdk")
             ],
             resources: [
