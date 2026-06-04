@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files = 'flutter_meta_sdk/Sources/flutter_meta_sdk/**/*.swift'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'FBSDKCoreKit', '~> 18.0.3'
+  s.dependency 'FBSDKCoreKit', '~> 18.0'
   s.platform = :ios, '13.0'
 
   # Flutter.framework does not contain a i386 slice.
