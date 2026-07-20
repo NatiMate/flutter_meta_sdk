@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 
 android {
     namespace 'com.solusibejo.flutter_meta_sdk'
-    compileSdkVersion 36
+    compileSdkVersion 37
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
