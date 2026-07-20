@@ -5,10 +5,10 @@
 //  Created by Chandra Abdul Fattah on 25/07/22.
 //
 
+import Flutter
 import Foundation
 import FBSDKCoreKit
 import FBSDKCoreKit_Basics
-import FBAudienceNetwork
 
 class FlutterMetaSdkMethods {
     static func clearUserData(result: @escaping FlutterResult) {
