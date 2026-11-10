@@ -1,5 +1,6 @@
 package com.solusibejo.flutter_meta_sdk
 
+import android.app.Application
 import android.os.Bundle
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsConstants
@@ -13,7 +14,26 @@ object FlutterMetaSdkMethods {
         result.success(FacebookSdk.getSdkVersion())
     }
 
-    fun activateApp(appEventsLogger: AppEventsLogger, result: MethodChannel.Result) {
+    private var isSdkStartupCompleted = false
+
+    /**
+     * Logs the app activation and, on the first call per process, runs the
+     * SDK start-up that the Meta SDK skips when
+     * `com.facebook.sdk.AutoLogAppEventsEnabled` is false at process start
+     * (user-data stores, install ping, lifecycle tracking, library init).
+     * Apps that only enable auto logging after the user's consent rely on
+     * this so events of that first session can still be attributed.
+     */
+    fun activateApp(
+        application: Application,
+        appEventsLogger: AppEventsLogger,
+        result: MethodChannel.Result
+    ) {
+        if (!isSdkStartupCompleted) {
+            isSdkStartupCompleted = true
+            AppEventsLogger.activateApp(application)
+            AppEventsLogger.initializeLib(application, FacebookSdk.getApplicationId())
+        }
         appEventsLogger.logEvent(AppEventsConstants.EVENT_NAME_ACTIVATED_APP)
         result.success(null)
     }

@@ -1,5 +1,6 @@
 package com.solusibejo.flutter_meta_sdk
 
+import android.app.Application
 import android.content.Context
 import androidx.annotation.NonNull
 import com.facebook.appevents.AppEventsLogger
@@ -41,7 +42,11 @@ class FlutterMetaSdkPlugin: FlutterPlugin, MethodCallHandler {
   override fun onMethodCall(call: MethodCall, result: Result) {
     when (call.method) {
       "getSdkVersion" -> FlutterMetaSdkMethods.getSdkVersion(appEventsLogger, result)
-      "activateApp" -> FlutterMetaSdkMethods.activateApp(appEventsLogger, result)
+      "activateApp" -> FlutterMetaSdkMethods.activateApp(
+        context as Application,
+        appEventsLogger,
+        result
+      )
       "clearUserData" -> FlutterMetaSdkMethods.clearUserData(result)
       "setUserData" -> FlutterMetaSdkMethods.setUserData(call, result)
       "clearUserID" -> FlutterMetaSdkMethods.clearUserId(result)
